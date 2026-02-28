@@ -1,0 +1,452 @@
+/******************************************/
+/*********** Universal settings ***********/
+/******************************************/
+
+/* Defining all colours used, and assigning names */
+:root {
+    --primary-green: #3D483D;
+    --medium-green: #4D5B4D;
+    --accent-green: #DEE3DE;
+    --light-green: #EBEFEB;
+    --soft-white: #F1F4F1;
+    --white: #ffffff;
+    --nav-inactive: rgba(255, 255, 255, 0.65)
+}
+
+/* Defining fonts to refer to in code */
+.font--cabin {
+    font-family: 'Cabin', sans-serif;
+}
+
+.font--dm {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.roster-summary .card {
+    background-color: var(--accent-green)
+}
+
+.index-mobile-contact .card,
+.contact-page .card,
+.booking-date-time .card,
+.booking-summary .card {
+    background-color: var(--accent-green);
+}
+
+/*Setting background colour for the navbar*/
+.navbar {
+    background-color: var(--primary-green);
+}
+
+/* Setting the font size for the navbar - this is to be responsive, which bootstrap doesn't allow with set font size classes*/
+.navbar-brand {
+    font-size: 26px;
+}
+
+/* Overriding bootstrap inactive navbar link colour to improve accessibility and colour contrast */
+.navbar-nav .nav-link {
+    color: var(--nav-inactive);
+}
+
+/* Overriding bootstrap navbar hover to improve accessibility and colour contrast */
+.navbar-nav .nav-link:hover {
+    color: var(--white);
+}
+
+/* Overriding bootstrap active to improve accessibility and colour contrast */
+.navbar-nav .nav-link.active {
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* Adding a hover effect to the navbar links to improve accessibility and colour contrast, as well as adding a background colour and border radius to make it more visually appealing and easier to see which link is being hovered over */
+.navbar .navbar-nav .nav-link:hover {
+    background-color: var(--medium-green);
+    border-radius: 6px;
+}
+
+/******************************************/
+/***************** BUTTON *****************/
+/******************************************/
+
+/* Setting up the default button styles, and then adding modifiers for different types of buttons, such as wide buttons, white buttons, and select buttons */
+.btn {
+    background-color: var(--white);
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    border-radius: 6px;
+    font-weight: 800;
+    padding: 14px;
+    font-size: 18px;
+    line-height: 1;
+    text-wrap: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* Modifier for wide buttons, which are used in the booking process to make the buttons more prominent and easier to click on */
+.btn--wide {
+    width: 260px;
+}
+
+/* Adding a hover effect to all buttons */
+.btn:hover {
+    background-color: var(--medium-green);
+    color: var(--white);
+    border-color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Removing the hover and focus effects for buttons that are in input groups, as these buttons are used for form submission and should not have the same hover and focus effects as other buttons */
+
+.input-group .btn:hover,
+.input-group .btn:focus-visible {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Adding a focus effect to all buttons to improve accessibility and colour contrast, as well as adding a background colour and border radius to make it more visually appealing and easier to see which button is being focused on */
+.btn:focus-visible,
+.btn-check:focus-visible+.btn {
+    background-color: var(--accent-green);
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* Adding a white border for buttons that are on a green background that already matches the background button colour. e.g. navbar and the services search button */
+.btn.btn--white {
+    border-color: var(--white);
+}
+
+/* Adding the hover effect for buttons that use btn--select. Mainly used in the cards for adding a service */
+.btn.btn--select:hover {
+    background-color: var(--accent-green);
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+/* Adding a selected state for buttons that use btn--select and btn-check is checked, which is used in the cards for adding a service, and the date and time selection. */
+.btn-check:checked+.btn.btn--select {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: var(--white);
+}
+
+/* Adding a hover effect for the selected state of buttons that use btn--select  when the btn-check is checked */
+.btn-check:checked+.btn.btn--select:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: var(--white);
+    cursor: default;
+}
+
+/******************************************/
+/************ SECTION SETTINGS ************/
+/******************************************/
+
+/* Defining default font colour and background colour for each section */
+
+.index-intro,
+.services-intro {
+    background: linear-gradient(to bottom,
+            var(--primary-green) 0%,
+            var(--medium-green) 50%);
+    color: var(--white);
+}
+
+
+.index-second,
+.index-mobile-contact,
+.services-features-section,
+.gallery-page,
+.contact-page,
+.booking-featured-services,
+.booking-all-services,
+.booking-date-time,
+.booking-customer-information,
+.booking-pet-information,
+.booking-summary,
+.roster-summary,
+.roster-schedule {
+    background-color: var(--light-green);
+    color: var(--primary-green)
+}
+
+.index-third {
+    background-color: var(--accent-green);
+    color: var(--primary-green)
+}
+
+.footer {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+
+/* Setting up defaults for cards, and adding custom CSS to enable the ability to scroll through cards, as this is not a default bootstrap functionality */
+
+/* Defining font colour to be used on all cards */
+.card {
+    color: var(--primary-green);
+}
+
+/* Setting the behaviour for inline text items that link to something else. removing the deafult underline, and making the text white */
+.external-link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* As above, however this sets the text colour to green*/
+.external-link--green {
+    color: var(--primary-green);
+    text-decoration: none;
+}
+
+/* Adding an underline effect to external links when they're hovered over  */
+.external-link:hover,
+.external-link--green:hover {
+    text-decoration: underline;
+}
+
+.external-link--green:hover {
+    color: var(--medium-green);
+}
+
+/* Setting form items */
+
+/* Setting the max width for the search bar on the services page*/
+.search-field {
+    max-width: 1000px;
+}
+
+/* Adding the correct colours for the table in the roster.html. Setting thetext colour to primary green for td and th, and the background*/
+.roster-table td,
+.roster-table th {
+    background-color: var(--soft-white);
+    color: var(--primary-green);
+}
+
+/* Adding the background colour and text colour for the items in the roster*/
+.leave-table td,
+.leave-table th {
+    background-color: var(--accent-green);
+    color: var(--primary-green);
+}
+
+/* Removing the ability to resize all text fields */
+textarea {
+    resize: none;
+}
+
+
+
+/* Adding a border to the button to separate from the search field */
+.input-group .btn {
+    border-left: 1px solid #4D5B4D;
+}
+
+/* Adding a section divider to be used in the Service and Booking pages */
+
+.section-divider {
+    height: 3px;
+    background-color: var(--primary-green);
+    border: none;
+    opacity: 1;
+}
+
+/* Scrollable wrapper */
+
+/* Addomg a custom class for a scroll wrapper that allows cards to move off screen but the user can still scrolls to view the cards.
+scroll-snap-type: ensures that the scroll moves to display the card and will snap to show a card, rather than free scrolling
+webkit-overflow-scrolling - makes the scrolling feel more fluid when using a mobile device rather than stopping immediately when lifting a finger off the screem - especially important for iOS devices
+scrollbar-width: removes the scrollbar from the screen to make it look cleaner */
+.item-scroll-wrapper {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+
+/* Setting the max width of the card within the item-scroll-wrapper, using flex 0 0 auto to prevent a card from growing to fill the space, from shrinking if there isn't enough room, as they must go in to a scroll bar, and auto to use the max-width of 390px that has been set.
+scroll snap align works with scroll snap type to ensure the card is positioned correctly within the wrapper and appear like it's locking in to place  */
+.item-scroll-wrapper .card {
+    max-width: 390px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+}
+
+
+
+/* Standardized Image Proportions for the images in the features section. Width ensures the image always spans across the full card and height 250px ensures that the image always remains at 250px. object-fit ensures that the image will scale when the screen is resized, despite the 250px set height */
+.item-scroll-wrapper .card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+/* These two items prevent the user from selecting or highlighting the image in the testimonial card, and also preventsthe user from picking up the image and dragging it across the screen. This allows the user to cleanly swipe the image to view the before and after images.*/
+.testimonial-img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* This is the items within the bootstrap carousels that allows the user to select the next or previous buttons. This sets the shape, colour, and widths of the buttons. */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+/* controls how the images sit within their slides. width 100% to take up the full width, ,heigh calc(100%-90px) to take 90px from the eight of the image to help reserve space for the captions below it. object-fit contain ensures the full image is shown without any cropping.*/
+.carousel-item img {
+    width: 100%;
+    height: calc(100% - 90px);
+    object-fit: contain;
+}
+
+/* position static ensures the caption is placed underneath the image, and colour set to green for font colour. */
+.carousel-caption {
+    position: static;
+    color: var(--primary-green)
+}
+
+/* Carousel indicators for the gallery page, which are used as thumbnails to select the image to view in the carousel. Position static to place underneath the caption and image, and overflow-x scroll allows the user to scroll through the thumbnails if there are more than can fit on the screen. */
+.carousel-indicators.gallery-thumbnails {
+    position: static;
+    overflow-x: scroll;
+}
+
+/* Setting the size of the thumbnail buttons, and using flex 0 0 auto to prevent the buttons from growing to fill the space, from shrinking if there isn't enough room, as they must go in to a scroll bar, and auto to use the width and height of 80px that has been set. */
+.carousel-indicators.gallery-thumbnails>button {
+    flex: 0 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+/* Setting the size of thumbnail images, and using display block to remove the default inline spacing, and border radius. */
+.carousel-indicators.gallery-thumbnails>button img {
+    display: block;
+    border-radius: 6px;
+}
+
+/* Setting the max width of the carousel inner and gallery filter to 900px */
+.carousel-inner,
+.gallery-filter {
+    max-width: 900px;
+}
+
+/* Setting the font size and weight for the captions on the gallery page.  */
+.gallery-image-caption-1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Setting up the class for the responsive table. fixed ensures that the column widths are fixed and even, width 100% to take up all the space within the container, border collapse separate to be able to have space between columns and border spacing 40px to specify that space. This helps when the table collapses according to screen size*/
+.table-responsive-table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 40px 0;
+}
+
+/*this ensures that the text within the table cells is aligned to the top of the cell . */
+.table-responsive-table td {
+    vertical-align: top;
+}
+
+
+
+
+
+/* Setting responsive behavour for item scroll wrapper at 1250px or higher*/
+@media (min-width: 1250px) {
+
+    /* Ensures the cards sit in the middle of the continer, rather than to the left */
+    .item-scroll-wrapper {
+        justify-content: center;
+    }
+}
+
+/* setting responsive behaviour at 992px or lower */
+@media (max-width: 992px) {
+
+    /* When the menu collapses, this ensures the navigation links and the button stretch to fill the space, up to 400px. This makes it easier for those using mobile to navigate */
+    .navbar-nav .nav-link,
+    .navbar-nav .btn {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    /* This is the first set of responsive login for the booking summary. This strips away the table behaviour to get table and tbody to act like block elements */
+    .table-responsive-table tbody,
+    .table-responsive-table {
+        display: block;
+        width: 100%;
+    }
+
+    /* This gets the table to use a grid format and form a 2 column grid - forces the pet and total price columns to drop below the services and time columns*/
+    .table-responsive-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 40px;
+    }
+
+    /* This turns td in to a block element, so it will stack rather than be on the same line. */
+    .table-responsive-table td {
+        display: block;
+    }
+
+    /* This uses the data label attribute to create a new label for each table cell, and applies the formatting rules*/
+    .table-responsive-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 16px;
+    }
+
+    /* Removed the booking summary table heads so that the table data labels will create a new table heading instead when the table is stacked */
+    .booking-summary thead {
+        display: none;
+    }
+}
+
+
+/* Setting responsive behaviour when screen is 767px or below. */
+@media (max-width: 767px) {
+
+    /* reducing caption text size to 16px and font weight to normal */
+    .gallery-image-caption-1 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    /* changing the height rules for the carousel-item image to reduce the reserved space, as now only the main caption is displayed to the user, rathe than the extended captions. */
+    .carousel-item img {
+        height: calc(100% - 40px);
+    }
+
+    /* Adding the final responsive behaviur for the table and forcing it to a single column with a gap of 22px */
+    .table-responsive-row {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+
+    /* Reducing the navar-brand font size for small screens */
+    .navbar-brand {
+        font-size: 18px;
+    }
+}

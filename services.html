@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Snazzy Paws Grooming - Our services</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Discover our full range of dog grooming services in Hamilton CBD including full grooming packages, bath and brush, nail trims, spa treatments and add-ons. View pricing and book online.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/a3css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Adding the nav bar - refer to index.html for notes -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 px-1 px-lg-5" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center gap-1 gap-sm-3" href="index.html">
+                <img src="images/icons/logo-white.svg" alt="Snazzy Paws Grooming Logo" width="42" height="40"
+                    loading="eager">
+                <span class="font--cabin fst-italic">Snazzy Paws Grooming</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-4 gap-lg-2 font--dm text-center">
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-xl-3" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-xl-3 active" href="services.html">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-xl-3" href="gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-xl-3" href="contact.html">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn--white shadow" href="booking.html">BOOK NOW</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Adding main heading section -->
+    <main id="main">
+        <section class="services-intro py-5">
+            <div class="container px-4 px-lg-5 mb-5">
+                <div class="text-center mb-5 font--dm">
+                    <h1 class="fw-bold">Professional Dog Grooming Services</h1>
+                    <p class="fs-4 fst-italic">From basic baths to full grooming, we keep your dog looking and feeling
+                        their best</p>
+                </div>
+
+                <!-- Adding form for search criteria (search is non-functional). Using search-field to make the form width max of 1000px. mx-auto ensures the form is centered evenly within the container. Font set to dm sans to apply to all seach field items -->
+                <form class="search-field mx-auto font--dm">
+
+                    <!-- Adding the row for the search field -->
+                    <div class="row">
+
+
+
+                        <!-- adding the label for the search field and assigning bootstrap classes to using formatting. Font size using fs-4 to set to 20px for the label. Form field label to add additional padding to the label -->
+                        <label for="service-search" class="form-label ps-3 form fs-4">
+                            Search for your perfect service:
+                        </label>
+
+                        <!-- input-group to add the search field and use bootstrap formatting. mb-4 to add spacing to the bottom of the search. -->
+                        <div class="input-group mb-4">
+
+                            <!-- specifying id for the search to relate to the button. Defining the input type and using bootstrap form-control class for styling. Aria label added for screen readers and specify that the search button its the source of this -->
+                            <input id="service-search" type="text" class="form-control"
+                                placeholder="Search our services..." aria-label="Search our services"
+                                aria-describedby="search-button">
+
+                            <!-- button for search field -->
+                            <button class="btn btn--white" type="submit" id="search-button"
+                                aria-label="Search grooming services">Search</button>
+                        </div>
+
+                    </div>
+
+                    <!-- Adding second row for filters label -->
+                    <div class="row">
+                        <!-- second row should take all 12 columns (full width)-->
+
+
+                        <!-- Adding the label for the filters. Setting font size to 20px, using bootstrap classes for styling.-->
+                        <label class="form-label ps-3 form fs-4">Show pricing by pet size:</label>
+
+                    </div>
+
+                    <!-- Adding third row for filters.-->
+                    <div class="row mt-0">
+
+                        <!-- Adding the first filter. At smaller screensizes, the field should take up the full screen (col-12) and at larger screens, the field should take up half the width to allow for the second filter -->
+                        <div class="col-12 col-md-6 mb-3">
+
+                            <!-- Adding the label for the breed select. Visually hidden as placeholder text to inform in the UI, however still required for accessibility-->
+                            <label for="breeds" class="visually-hidden">
+                                Select your dog's breed
+                            </label>
+
+                            <!-- Setting the input type, and id's. Using bootstrap classes for styline-->
+                            <select id="breeds" name="breeds" class="form-select">
+
+                                <!-- Setting the placeholder text item -->
+                                <option value="" selected="selected">Select a breed...</option>
+
+                                <!-- Setting the list items -->
+                                <option value="lab">Labrador</option>
+                                <option value="poodle">Poodle</option>
+                                <option value="jack-russel">Jack Russel</option>
+                                <option value="miniature-schnauzer">Miniature Schnauzer</option>
+                                <option value="cocker-spaniel">Cocker Spaniel</option>
+                                <option value="great-dane">Great Dane</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- As above -->
+                        <div class="col-12 col-md-6">
+                            <label for="weight" class="visually-hidden">
+                                Select your dog's weight
+                            </label>
+                            <select id="weight" name="weight" class="form-select">
+                                <option value="" selected="selected">Select a weight...</option>
+                                <option value="xsmall">Up to 5kg</option>
+                                <option value="small">5kg to 10kg</option>
+                                <option value="medium">10kg to 25kg</option>
+                                <option value="large">25kg to 40kg</option>
+                                <option value="xlarge">Over 40kg</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Adding the services section feature cards. -->
+        <section class="services-features-section py-5">
+            <div class="container">
+
+                <!-- Adding the feature star icon. As this is an icon for decorative purposes only, alt text is none and ira is hidden-->
+                <div class="d-flex align-items-center gap-3 mb-0">
+                    <img src="images/icons/star.svg" alt="" aria-hidden="true" class="services-logo-header" width="48"
+                        height="48" loading="lazy">
+                    <!-- Adding the heading to be on the same line as the icon-->
+                    <h2 class="fw-bold font--cabin fs-1 mb-0">Featured services</h2>
+                </div>
+
+                <!-- Divider for the line between the heading an cards. Using CSS customisation to change colour and increase thickness-->
+                <hr class="section-divider">
+            </div>
+
+            <!-- Adding a fluid container as the cards will be in a scrollable row when the screen hits a smaller size and they no longer fit.-->
+            <div class="container-fluid">
+
+                <!-- using a custom class for the cards within for the container to allow them to scroll. The bootstrap carousel has not been used as these items should show all at the same time, rather than a bootstrap carousel that displays only one at a time. d-flex to turn the container in to a flexbox and the item sit side by side, nowrap to prevent the cards frim wrapping and dropping to new rows, overflow-auto so the page doesn't break and a scrollbar addded. gap 4 for consistent spacing between the cards, and pb-3 for spacing below the cards. font set to dm-sans for all cards-->
+                <div class="item-scroll-wrapper d-flex flex-nowrap overflow-auto gap-4 pb-3 font--dm">
+
+                    <!-- adding the first card. p-2 to add padding to the inside, and w-100 so that the card takes up all available space in terms of width-->
+                    <div class="card p-2 w-100">
+
+                        <!-- adding the card header. bg-white to remove the bootstrap card header default grey background, border 0 to remove the defaults border, d-flex/flex-column to make the icon and text stack. gap-2 to add space between the icon and text, and p-0 to remove padding from the card-header-->
+                        <div class="card-header bg-white border-0 d-flex flex-column gap-2 p-0">
+
+
+                            <!-- Adding the icon. Setting the width and height, and aria hidden as this is decorative only. Loading lazy as it is not important. -->
+                            <img src="images/icons/toothbrush.svg" alt="" aria-hidden="true" width="60" height="60"
+                                loading="lazy">
+
+                            <!-- Adding the card title text. fw-bold for bold text, p-2 to add padding around it, and m-0 to remove margins.-->
+                            <h3 class="card-title fw-bold p-2 m-0">Teeth brushing
+                            </h3>
+                        </div>
+
+                        <!-- card-body for the text. pt-0 to remove default top padding -->
+                        <div class="card-body pt-0">
+
+                            <!-- adding the list. ps-3 to add padding to the left side-->
+                            <ul class="ps-3">
+                                <li>Pet safe toothpaste</li>
+                                <li>Gentle plaque removal</li>
+                                <li>Improves breath</li>
+                            </ul>
+                        </div>
+
+                        <!-- card footer for pricing information - same as index page-->
+                        <div class="card-footer border-top bg-white pb-0">
+                            <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                <div class="pb-md-0 pb-2">
+                                    <span class="d-block mb-0">Starting from:</span>
+                                    <span class="d-block fw-bold mb-0 fs-5">$10 – $15*</span>
+                                </div>
+                                <a href="booking.html" class="btn btn--select shadow-sm"
+                                    aria-label="Book a teeth brushing appointment">
+                                    Book now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Remaining two cards with the same settings -->
+                    <div class="card p-2 w-100">
+
+                        <div class="card-header bg-white border-0 d-flex flex-column gap-2 p-0">
+                            <img src="images/icons/full-groom.svg" alt="" aria-hidden="true" width="60" height="60"
+                                loading="lazy">
+                            <h3 class="card-title fw-bold p-2 m-0">Full Grooming Package</h3>
+                        </div>
+
+                        <div class="card-body pt-0">
+                            <ul class="ps-3">
+                                <li>Full professional groom</li>
+                                <li>Bath and haircut</li>
+                                <li>Teeth brushing nail trim, and ear cleaning</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-footer border-top bg-white pb-0">
+                            <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                <div class="pb-md-0 pb-2">
+                                    <span class="d-block mb-0">Starting from:</span>
+                                    <span class="d-block fw-bold mb-0 fs-5">$60 – $120*</span>
+                                </div>
+                                <a href="booking.html" class="btn btn--select shadow-sm"
+                                    aria-label="Book a full grooming package appointment">
+                                    Book now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-2 w-100">
+
+                        <div class="card-header bg-white border-0 d-flex flex-column gap-2 p-0">
+                            <img src="images/icons/deshedding.svg" alt="" aria-hidden="true" width="60" height="60"
+                                loading="lazy">
+                            <h3 class="card-title fw-bold p-2 m-0">De-shedding add-on</h3>
+                        </div>
+
+                        <div class="card-body pt-0">
+
+                            <ul class="ps-3">
+                                <li>Deep undercoat removal</li>
+                                <li>Lighter and smoother coat</li>
+                                <li>Available with Bath and brush, or Haircut treatments</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer border-top bg-white pb-0">
+                            <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                <div class="pb-md-0 pb-2">
+                                    <span class="d-block mb-0">Starting from:</span>
+                                    <span class="d-block fw-bold mb-0 fs-5">$20 – $40**</span>
+                                </div>
+                                <a href="booking.html" class="btn btn--select shadow-sm"
+                                    aria-label="Book a de-shedding add-on appointment">
+                                    Book now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New section for the all services cards-->
+        <section class="services-features-section py-5">
+            <div class="container">
+                <div class="d-flex align-items-center gap-3 mb-0">
+                    <img src="images/icons/star.svg" alt="" aria-hidden="true" class="services-logo-header" width="48"
+                        height="48" loading="lazy">
+                    <div class="pb-md-0 pb-2">
+                        <h2 class="fw-bold font--cabin fs-1 mb-0">All services</h2>
+                    </div>
+                </div>
+                <hr class="section-divider">
+
+                <!-- This section doesn't have a carousel and is using the bootstrap grid system to order the cards instead -->
+
+                <!-- Specifying that the cards should be in a row. g-4 sets the gutter between columns to 25px, keeping consistent space top and bottom setting font--dm as all text in this section should use the same font family-->
+
+                <div class="row g-4 px-2 font--dm">
+
+                    <!-- col-12 makes the cards display on 1 row at screen sizes below 768px. col-md-6 puts two cards on 1 row at 768px and above, and col-xl-4 puts 3 cards on a row at 1200px and above-->
+                    <div class="col-12 col-md-6 col-xl-4">
+
+                        <!-- Card added, p-2 for 8px of padding around the inner of the card, d-flex to make the items in the card becmoe flex items. Flex column to make the flex direction column, to ensure items stack h-100 so that the card spans the full height of the column -->
+                        <div class="card p-2 h-100">
+
+                            <!-- setting d-flex so that the icon and header become flex items and sit beside eachother. Align items center, to sit centered, gap-2 for spacing between the icon and the text -->
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+
+                                <!-- Adding the icon. Setting sizing for the icon to ensure there is no shift when the page loads. No alt text as this is decorative, and aria hidden. Loading lazy as these are not important items to be loaded-->
+                                <img src="images/icons/bath-brush.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+
+                                <!-- Adding the card header and making it bold -->
+                                <h3 class="card-title fw-bold p-2 m-0">Bath and brush
+                                </h3>
+                            </div>
+
+                            <!-- Adding the card body section, and removing bottom padding-->
+                            <div class="card-body pb-0">
+
+                                <!--Adding the ul for the service description. Adding 16px padding to the left side -->
+                                <ul class="ps-3">
+                                    <li>Shampoo and blowdry</li>
+                                    <li>Brush out</li>
+                                    <li>Nail trim</li>
+                                </ul>
+                            </div>
+
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <!-- Adding the pricing information. adding 16px padding to the bottom when the cards stack, but removing it when they'r enot stacked -->
+                                    <div class="pb-2 pb-md-0">
+
+                                        <!-- adding text and removing bottom margin -->
+                                        <span class="d-block">Starting from:</span>
+
+                                        <!-- Adding price as bold text, font 20px and removing margin -->
+                                        <span class="fw-bold fs-5">$25 – $50*</span>
+                                    </div>
+
+                                    <!-- Adding button directing user to the booking page -->
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a bath and brush appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Remaining cards use the same formatting as above -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/haircut.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Haircut
+                                </h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Bath and blowdry</li>
+                                    <li>Haircut (based on breed standard or owner's preference)</li>
+                                    <li>Nail trim</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$45 – $85*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a haircut appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/nail.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Nail trim
+                                </h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Trim nails</li>
+                                    <li>Filing (if required)</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$10 – $20*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a nail trim appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/ear.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Ear cleaning
+                                </h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Gentle cleaning</li>
+                                    <li>Removes wax and debris</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$10 – $15*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book an ear cleaning appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/toothbrush.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Teeth brushing
+                                </h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Pet safe toothpaste</li>
+                                    <li>Gentle plaque removal</li>
+                                    <li>Improves breath</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$10 – $15*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a teeth brushing appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/deshedding.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">De-shedding add on</h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Removes loose fur and undercoat</li>
+                                    <li>Reduces shedding by up to 90%</li>
+                                    <li>Promotes healthier skin and coat</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$20 – $40**</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a de-shedding add-on appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/tick-and-flea.svg" alt="" aria-hidden="true" width="60"
+                                    height="60" loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Flea and tick treatment</h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Shampoo</li>
+                                    <li>Preventative treatment</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$15 – $30*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a flea and tick treatment appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/spa.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Spa package
+                                </h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Bath and haircut</li>
+                                    <li>Teeth brushing and nail trim</li>
+                                    <li>Special scents and conditioners</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$75 – $150*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a spa package appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/express.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Express service</h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Minimal grooming</li>
+                                    <li>Great for touch ups</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$15 – $25*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book an express service appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/medicated-bath.svg" alt="" aria-hidden="true" width="60"
+                                    height="60" loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Medicated bath</h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Ideal for pets with skin conditions</li>
+                                    <li>Special shampoo</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$20 – $40*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a medicated bath appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/special-breed.svg" alt="" aria-hidden="true" width="60"
+                                    height="60" loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Special breed cut</h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Breed specific cuts</li>
+                                    <li>Custom styling based on owner preference</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="mb-0">Pricing subject to quotation</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a special breed cut appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/puppy.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+                                <h3 class="card-title fw-bold p-2 m-0">Puppy package</h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Introductory grooming service</li>
+                                    <li>Tailored for puppies</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$30 – $60*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a puppy package appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/senior.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+
+                                <h3 class="card-title fw-bold p-2 m-0">Senior dog package</h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Tailored for older dogs</li>
+                                    <li>Special card and handling</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$40 – $80*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a senior dog package appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card p-2 h-100">
+                            <div class="card-header bg-white border-0 d-flex align-items-center gap-2 p-0">
+                                <img src="images/icons/full-groom.svg" alt="" aria-hidden="true" width="60" height="60"
+                                    loading="lazy">
+                                <h3 class="card-title fw-bold p-2 mb-0">Full grooming package</h3>
+                            </div>
+                            <div class="card-body pb-0">
+                                <ul class="ps-3">
+                                    <li>Bath and haircut</li>
+                                    <li>Teeth brushing, nail trim and ear cleaning</li>
+                                    <li>Full professional groom</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pb-0">
+                                <div class="d-grid d-md-flex justify-content-md-between align-items-md-center">
+                                    <div class="pb-md-0 pb-2">
+                                        <span class="d-block">Starting from:</span>
+                                        <span class="d-block fw-bold fs-5 mb-0">$60 – $120*</span>
+                                    </div>
+                                    <a href="booking.html" class="btn btn--select shadow-sm"
+                                        aria-label="Book a full grooming package appointment">
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Adding the terms to the bottom of the cards -->
+            <div class="pt-2 terms font--cabin text-center d-flex flex-column">
+
+                <!-- Adding small text for terms-->
+                <small>*Pricing is indicative only. Actual price may differ depending on breed
+                    and dog size.</small>
+                <small>*De-shedding treatment is only available as an add on to the Bath and
+                    brush, or Haircut treatments.</small>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- adding the footer - refer to index.html for notes -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row text-center text-lg-start">
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <div class="d-flex justify-content-center justify-content-lg-start align-items-center gap-3 mb-2">
+                        <img src="images/icons/logo-white.svg" alt="Snazzy Paws Grooming Logo" width="42" height="40"
+                            loading="lazy">
+                        <span class="fw-bold fs-5 fst-italic font--cabin">Snazzy Paws Grooming</span>
+                    </div>
+                    <div
+                        class="d-flex justify-content-center justify-content-lg-start align-items-center gap-4 mb-3 font--dm">
+                        <p>Open 9:00am - 5:00pm Monday to Saturday</p>
+                    </div>
+                    <div class="d-flex justify-content-center justify-content-lg-start align-items-center gap-4 mb-3">
+                        <span class="fw-bold fs-5 font--dm">Check out our socials!</span>
+                    </div>
+                    <div class="d-flex justify-content-center justify-content-lg-start align-items-center gap-4 mb-3">
+                        <a href="https://www.facebook.com/Snazzypaws/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/icons/facebooksvg.svg" alt="Facebook (opens in a new tab)" width="30"
+                                height="30" loading="lazy">
+                        </a>
+                        <a href="https://www.instagram.com/snazzypawsdoggroomingnarangba/?hl=en" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="images/icons/instagram.svg" alt="Instagram (opens in a new tab)" width="30"
+                                height="30" loading="lazy">
+                        </a>
+                        <a href="https://www.tiktok.com/your-real-link" target="_blank" rel="noopener noreferrer">
+                            <img src="images/icons/tiktok.svg" alt="TikTok (opens in a new tab)" width="30" height="30"
+                                loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <div class="mx-auto text-center text-lg-start font--dm">
+                            <span class="fw-bold fs-5 d-block mb-3">Quick links</span>
+                            <ul class="list-unstyled ps-0 mb-0">
+                                <li><a class="external-link" href="index.html">HOME</a></li>
+                                <li><a class="external-link" href="services.html">SERVICES</a></li>
+                                <li><a class="external-link" href="gallery.html">GALLERY</a></li>
+                                <li><a class="external-link" href="contact.html">CONTACT US</a></li>
+                                <li><a class="external-link" href="booking.html">MAKE A BOOKING</a></li>
+                                <li><a class="external-link" href="privacy.html">PRIVACY POLICY</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <div class="mx-auto text-center text-lg-start font--dm">
+                            <span class="fw-bold fs-5 d-block mb-3">Contact us</span>
+                            <p class="mb-0">Shop 3 - 501 Center Place</p>
+                            <p class="mb-0">Central CBD District</p>
+                            <p class="mb-0">Hamilton 2879</p>
+                            <p class="mt-4 mb-0">Phone: (000) 123 12345</p>
+                            <p class="mb-0">Email: <a
+                                    href="mailto:hello@snazzypawsgrooming.co.nz?subject=General%20enquiry"
+                                    class="external-link">
+                                    hello@snazzypawsgrooming.co.nz
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS bundle for the toggle menu to work -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

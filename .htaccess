@@ -1,0 +1,6 @@
+<Files "roster.html">
+    AuthType Basic
+    AuthName "Staff Roster - Secure Access"
+    AuthUserFile ""/a3-bit607/password/.htpasswd
+    Require valid-user
+</Files>
